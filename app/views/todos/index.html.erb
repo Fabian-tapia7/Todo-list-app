@@ -1,0 +1,9 @@
+<% @todos.each do |todo| %>
+  <p class="card card-body bg-light">Descripción: <%= todo.description %> </p>
+  <p class="card card-body bg-light">Completado: <%= todo.completed %> </p>
+  <p clase="btn btn-primary"> <%= link_to "Completar", completed_path(todo) %> </p>
+  <p> <%= link_to "Detalles", todo %> </p>
+  <p> <%= link_to "Editar", edit_path(todo) %> </p>
+  <p> <%= link_to "Borrar", todo, method: :delete %> </p>
+<% end %>
+<p> <%= link_to "Crear", todos_new_path %> </p>

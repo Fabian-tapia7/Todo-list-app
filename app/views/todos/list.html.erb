@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h4>Completados</h4>
+        <% @todos.each do |todo| %>
+          <% if todo.completed == true %>
+            <li><%= todo.description %> </li>
+          <% end %>
+        <% end %>
+    </div>
+    <div class="col-sm">
+      <h4>No completados</h4>
+        <% @todos.each do |todo| %>
+          <% if todo.completed == false %>
+            <li><%= todo.description %> </li>
+          <% end %>
+        <% end %>
+    </div>
+  </div>
+</div>
